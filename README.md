@@ -35,7 +35,7 @@
 ```python
 class Solution:
     def numSquares(self, n: int) -> int:
-        dp = [0] * (n+1)                               # 创建长度为 n+1 的数组，充当记录备忘录
+        dp = [0] * (n + 1)                             # 创建长度为 n+1 的数组，充当记录备忘录
         for i in range(1, n + 1):                      # 从数字 1 一直推算到目标数字 n
             if i ** 0.5 % 1 == 0:                      # 判断数字 i 本身是否就是个完全平方数
                 dp[i] = 1                              # 如果是，直接记录最优解为 1
